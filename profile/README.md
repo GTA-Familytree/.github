@@ -1,69 +1,64 @@
-# FamilyTree
+<p align="center">
+  <b>English</b> · <a href="#francais">Français</a> · <a href="#deutsch">Deutsch</a>
+</p>
 
-FamilyTree is a web application by GTA for building, exploring and sharing family trees.
-Families record their members, link generations together and keep their history in one place, from any device.
+<img src="assets/banner-en.png" alt="GTA Family Tree. Our elders carry our history. Let's keep it." width="100%">
 
-**Live app:** [familytree.gta-it.com](https://familytree.gta-it.com)
+<img src="assets/story-en.png" alt="In Africa, when an elder dies, a library burns. Amadou Hampâté Bâ. Voices, papers and faces are disappearing. This week, ask one elder one question: where were your parents born? #AskYourElders" width="100%">
 
-## What the app does
+<img src="assets/vision-en.png" alt="From family records to living heritage. Oral History, Document AI and Reconstruction are being built, a Family Assistant comes next. AI suggests, families decide. Every fact keeps its source. Your family, your data." width="100%">
 
-- Build several family trees per account, each in its own interactive canvas.
-- Add members with photos, birth and death dates, and personal notes.
-- Link parents and children (biological or adoptive) and couples (with marriage and divorce dates).
-- Generations and layout are computed automatically, with manual drag and drop on top.
-- Share a tree by invitation or by link, with viewer or editor roles.
-- Export a tree to PDF or image.
-- Available in French, English and German, with light and dark themes.
-- Free plan plus paid plans (Premium monthly, Premium yearly, Family Pack), paid by mobile money through Smobilpay.
+<h3 align="center">Start your tree today at <a href="https://familytree.gta-it.com">familytree.gta-it.com</a></h3>
 
-## Repositories
-
-| Repository | Content |
-|---|---|
-| `Genealogy-tree` | The application: `genealogy-backend` (API, workers, database migrations) and `genealogy-frontend` (web app) |
-
-## Tech stack
-
-**Backend**
-
-- Python, FastAPI, SQLAlchemy
-- PostgreSQL with Alembic migrations
-- Redis and Celery for background jobs (exports, payment checks)
-- Transactional emails rendered with Jinja
-
-**Frontend**
-
-- React 19, Vite, React Router
-- React Flow with dagre and ELK for tree layout
-- i18next for translations
-
-**Platform**
-
-- Docker images, deployed with Docker Compose
-- GitHub Actions for lint, type checks, tests, security scans (Bandit, Semgrep, pip-audit, npm audit, Trivy) and deployment
-
-## Architecture
-
-- The browser only talks to the backend API, through the frontend's web server.
-- The database and Redis live on a private Docker network and are reachable only by the backend.
-- Each environment (staging, production) runs as its own isolated stack: separate containers, network and database.
-
-## Environments and releases
-
-| Environment | Deployed when |
-|---|---|
-| Staging | Every push to `main` |
-| Production | Manual run of the deploy workflow on `main` with `deploy_prod` checked |
-
-Pull requests run the full check suite (lint, tests, build) without deploying.
-
-## Contributing
-
-1. Branch from `main`.
-2. Open a pull request to `main` and get the checks green.
-3. Database changes ship with an Alembic migration.
-4. Secrets never go in the repository: environment files live on the servers and in GitHub environment secrets.
+<p align="center">
+  Then ask an elder one question, and share their answer with <b>#AskYourElders</b>.<br>
+  Every name you save is a page that will not burn.
+</p>
 
 ---
 
-Built and maintained by [GTA](https://gta-it.com).
+<h2 id="francais">Français</h2>
+
+<details>
+<summary><b>Lire en français</b></summary>
+<br>
+
+<img src="assets/banner-fr.png" alt="GTA Family Tree. Nos anciens portent notre histoire. Gardons-la." width="100%">
+
+<img src="assets/story-fr.png" alt="En Afrique, quand un vieillard meurt, c'est une bibliothèque qui brûle. Amadou Hampâté Bâ. Les voix, les papiers et les visages disparaissent. Cette semaine, posez une question à un ancien : où sont nés tes parents ? #AskYourElders" width="100%">
+
+<img src="assets/vision-fr.png" alt="Des archives familiales au patrimoine vivant. Mémoire orale, documents IA et reconstruction en cours, assistant familial bientôt. L'IA propose, la famille décide. Chaque fait garde sa source. Votre famille, vos données." width="100%">
+
+<h3 align="center">Commencez votre arbre sur <a href="https://familytree.gta-it.com">familytree.gta-it.com</a></h3>
+
+<p align="center">
+  Puis posez une question à un ancien, et partagez sa réponse avec <b>#AskYourElders</b>.<br>
+  Chaque nom enregistré est une page qui ne brûlera pas.
+</p>
+
+</details>
+
+<h2 id="deutsch">Deutsch</h2>
+
+<details>
+<summary><b>Auf Deutsch lesen</b></summary>
+<br>
+
+<img src="assets/banner-de.png" alt="GTA Family Tree. Unsere Ältesten tragen unsere Geschichte. Bewahren wir sie." width="100%">
+
+<img src="assets/story-de.png" alt="Wenn in Afrika ein alter Mensch stirbt, verbrennt eine Bibliothek. Amadou Hampâté Bâ. Stimmen, Papiere und Gesichter verschwinden. Stellen Sie diese Woche einem Älteren eine Frage: Wo wurden deine Eltern geboren? #AskYourElders" width="100%">
+
+<img src="assets/vision-de.png" alt="Von Familienakten zum lebendigen Erbe. Mündliche Geschichte, Dokumenten-KI und Rekonstruktion in Arbeit, Familien-Assistent demnächst. KI schlägt vor, die Familie entscheidet. Jede Angabe behält ihre Quelle. Ihre Familie, Ihre Daten." width="100%">
+
+<h3 align="center">Beginnen Sie Ihren Stammbaum auf <a href="https://familytree.gta-it.com">familytree.gta-it.com</a></h3>
+
+<p align="center">
+  Stellen Sie dann einem Älteren eine Frage und teilen Sie die Antwort mit <b>#AskYourElders</b>.<br>
+  Jeder gespeicherte Name ist eine Seite, die nicht verbrennt.
+</p>
+
+</details>
+
+---
+
+<p align="center"><sub>Made in Cameroon by <a href="https://gta-it.com">GTA</a></sub></p>
